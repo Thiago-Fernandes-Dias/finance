@@ -16,6 +16,10 @@ dart_code_metrics:
     - prefer-trailing-comma
     - prefer-conditional-expressions
     - no-equal-then-else
+    
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
 
 linter:
   rules:

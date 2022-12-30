@@ -12,10 +12,12 @@ class AppRoot extends ConsumerStatefulWidget {
 class _AppRootState extends ConsumerState<AppRoot> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routeInformationParser: goRouter.routeInformationParser,
-      routeInformationProvider: goRouter.routeInformationProvider,
-      routerDelegate: goRouter.routerDelegate,
+    return ProviderScope(
+      child: MaterialApp.router(
+        routeInformationParser: goRouter.routeInformationParser,
+        routeInformationProvider: goRouter.routeInformationProvider,
+        routerDelegate: goRouter.routerDelegate,
+      ),
     );
   }
 }

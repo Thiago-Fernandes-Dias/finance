@@ -48,3 +48,9 @@ app.*.map.json
 /ios/Runner/GoogleService-Info.plist
 /ios/firebase_app_id_file.json
 /android/app/google-services.json
+
+# Freezed files
+*.freezed.dart
+
+# flutter_gen assets
+/lib/gen/
