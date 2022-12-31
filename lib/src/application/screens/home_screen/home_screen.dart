@@ -1,4 +1,5 @@
 import 'package:finance/gen/assets.gen.dart';
+import 'package:finance/src/models/user_info.dart';
 import 'package:finance/src/repositories/user_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -31,6 +32,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final userRepository = ref.watch(userRepositoryProvider);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey.shade300,
@@ -40,7 +42,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         title: const AppTitle(),
       ),
       drawer: const Drawer(child: Menu()),
-      body: _signedIn ? Container() : const Center(child: CircularProgressIndicator.adaptive()),
+      body: _signedIn
+          ? Center(
+              child: StreamBuilder<UserInfo>(
+                stream: userRepository.userInfoStream(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasError) {
+                    return Text(snapshot.error.toString());
+                  } else if (snapshot.hasData) {
+                    final userInfo = snapshot.data!;
+                    return Text(userInfo.toString());
+                  } else {
+                    return const SizedBox();
+                  }
+                },
+              ),
+            )
+          : const Center(child: CircularProgressIndicator.adaptive()),
     );
   }
 }

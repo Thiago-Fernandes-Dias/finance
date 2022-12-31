@@ -49,8 +49,9 @@ app.*.map.json
 /ios/firebase_app_id_file.json
 /android/app/google-services.json
 
-# Freezed files
+# Generated from freezed and json_serializable
 *.freezed.dart
+*.g.dart
 
 # flutter_gen assets
 /lib/gen/
