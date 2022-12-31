@@ -55,3 +55,6 @@ app.*.map.json
 
 # flutter_gen assets
 /lib/gen/
+
+# Launch configurations
+.vscode/launch.json

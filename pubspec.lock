@@ -147,7 +147,7 @@ packages:
       name: cloud_firestore_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.10.0"
+    version: "5.10.1"
   cloud_firestore_web:
     dependency: transitive
     description:
@@ -259,21 +259,21 @@ packages:
       name: firebase_auth
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.2.3"
+    version: "4.2.4"
   firebase_auth_platform_interface:
     dependency: transitive
     description:
       name: firebase_auth_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.11.6"
+    version: "6.11.7"
   firebase_auth_web:
     dependency: transitive
     description:
       name: firebase_auth_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.2.3"
+    version: "5.2.4"
   firebase_core:
     dependency: transitive
     description:
@@ -301,21 +301,21 @@ packages:
       name: firebase_dynamic_links
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.10"
+    version: "5.0.11"
   firebase_dynamic_links_platform_interface:
     dependency: transitive
     description:
       name: firebase_dynamic_links_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.3+25"
+    version: "0.2.3+26"
   firebase_ui_auth:
     dependency: "direct main"
     description:
       name: firebase_ui_auth
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.5"
+    version: "1.1.6"
   firebase_ui_localizations:
     dependency: transitive
     description:
@@ -329,7 +329,7 @@ packages:
       name: firebase_ui_oauth
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.5"
+    version: "1.1.6"
   fixnum:
     dependency: transitive
     description:
@@ -477,7 +477,7 @@ packages:
     source: hosted
     version: "4.0.2"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       url: "https://pub.dartlang.org"
