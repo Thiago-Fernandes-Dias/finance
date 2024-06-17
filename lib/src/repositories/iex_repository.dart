@@ -1,9 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
-
-final iexRepositoryProvider = Provider<IEXRepository>(
-  (ref) => IEXRepositoryImpl(http.Client()),
-);
 
 abstract class IEXRepository {
   Future<double> getStockPrice(String stockSymbol);

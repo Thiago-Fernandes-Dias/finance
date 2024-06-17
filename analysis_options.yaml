@@ -1,28 +1,14 @@
 include: package:flutter_lints/flutter.yaml
 
-dart_code_metrics:
-  anti-patterns:
-    - long-method
-    - long-parameter-list
-  metrics:
-    cyclomatic-complexity: 20
-    maximum-nesting-level: 5
-    number-of-parameters: 4
-    source-lines-of-code: 50
-  rules:
-    - newline-before-return
-    - no-boolean-literal-compare
-    - no-empty-block
-    - prefer-trailing-comma
-    - prefer-conditional-expressions
-    - no-equal-then-else
-    
 analyzer:
   errors:
     invalid_annotation_target: ignore
+  plugins:
+    - custom_lint
 
 linter:
   rules:
+    provider_parameters: true
     always_declare_return_types: true
     cancel_subscriptions: true
     close_sinks: true
